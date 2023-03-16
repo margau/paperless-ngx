@@ -632,6 +632,10 @@ export class DocumentDetailComponent
     )
   }
 
+  commentsUpdated(n_comments: number) {
+    this.document.n_comments = n_comments
+  }
+
   get userIsOwner(): boolean {
     let doc: PaperlessDocument = Object.assign({}, this.document)
     // dont disable while editing

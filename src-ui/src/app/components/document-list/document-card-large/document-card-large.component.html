@@ -65,7 +65,15 @@
             </a>
           </div>
 
+
           <div class="list-group list-group-horizontal border-0 card-info ms-md-auto mt-2 mt-md-0">
+            <div *ngIf="document.n_comments" class="list-group-item bg-light border-0 p-0 me-1 mt-1">
+              <span class="badge rounded-pill bg-dark text-primary">
+                <svg class="metadata-icon ms-1 me-1" fill="currentColor">
+                  <use xlink:href="assets/bootstrap-icons.svg#chat-left-text"/>
+                </svg>
+                {{document.n_comments}}</span>
+            </div>
             <button *ngIf="document.document_type" type="button" class="list-group-item btn btn-sm bg-light text-dark p-1 border-0 me-2" title="Filter by document type" i18n-title
              (click)="clickDocumentType.emit(document.document_type);$event.stopPropagation()">
               <svg class="metadata-icon me-2 text-muted bi bi-file-earmark" viewBox="0 0 16 16" fill="currentColor">
